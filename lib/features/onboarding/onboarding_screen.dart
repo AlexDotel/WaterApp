@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/theme/app_colors.dart';
 import '../../core/utils/hydration_utils.dart';
+import '../../core/widgets/hydra_logo.dart';
 import '../../data/models/user_settings.dart';
 import '../../data/providers/hydra_providers.dart';
 
@@ -86,7 +86,6 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final isDark = theme.brightness == Brightness.dark;
 
     return Scaffold(
       body: SafeArea(
@@ -96,21 +95,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
               child: Row(
                 children: [
-                  Container(
-                    width: 36,
-                    height: 36,
-                    decoration: BoxDecoration(
-                      color: isDark
-                          ? AppColors.primarySoftDark
-                          : AppColors.primarySoftLight,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Icon(
-                      Icons.water_drop_rounded,
-                      size: 20,
-                      color: theme.colorScheme.primary,
-                    ),
-                  ),
+                  const HydraLogo(size: 36, showShadow: false),
                   const SizedBox(width: 10),
                   Text(
                     'Hydra',

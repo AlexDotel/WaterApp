@@ -7,13 +7,43 @@ import 'features/home/home_screen.dart';
 import 'features/onboarding/onboarding_screen.dart';
 import 'features/progress/progress_screen.dart';
 import 'features/settings/settings_screen.dart';
+import 'features/splash/splash_screen.dart';
 
-class HydraApp extends ConsumerWidget {
-  const HydraApp({super.key});
+class HydraApp extends ConsumerStatefulWidget {
+  const HydraApp({
+    super.key,
+    this.showSplash = true,
+  });
+
+  final bool showSplash;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HydraApp> createState() => _HydraAppState();
+}
+
+class _HydraAppState extends ConsumerState<HydraApp> {
+  late bool _showingSplash;
+
+  @override
+  void initState() {
+    super.initState();
+    _showingSplash = widget.showSplash;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final settings = ref.watch(hydraProvider.select((s) => s.settings));
+
+    final Widget home;
+    if (_showingSplash) {
+      home = SplashScreen(
+        onFinished: () => setState(() => _showingSplash = false),
+      );
+    } else if (settings.onboardingCompleted) {
+      home = const HydraShell();
+    } else {
+      home = const OnboardingScreen();
+    }
 
     return MaterialApp(
       title: 'Hydra',
@@ -21,9 +51,10 @@ class HydraApp extends ConsumerWidget {
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
       themeMode: settings.themeMode,
-      home: settings.onboardingCompleted
-          ? const HydraShell()
-          : const OnboardingScreen(),
+      home: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 320),
+        child: home,
+      ),
     );
   }
 }

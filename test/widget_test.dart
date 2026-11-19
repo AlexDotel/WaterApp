@@ -32,6 +32,14 @@ void main() {
     );
     await tester.pump();
 
+    // SplashScreen visible al arrancar
+    expect(find.text('Hydra'), findsOneWidget);
+    expect(find.text('Tu hidratación, simple'), findsOneWidget);
+
+    // Transición automática del Splash al Onboarding
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pump(const Duration(milliseconds: 400));
+
     // Pantalla de onboarding visible
     expect(find.text('Hydra'), findsOneWidget);
     expect(find.text('Omitir'), findsOneWidget);

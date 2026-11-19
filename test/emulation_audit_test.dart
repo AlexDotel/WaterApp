@@ -40,7 +40,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
-            child: const HydraApp(),
+            child: const HydraApp(showSplash: false),
           ),
         );
         await tester.pump();
@@ -98,7 +98,7 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
-            child: const HydraApp(),
+            child: const HydraApp(showSplash: false),
           ),
         );
         await tester.pump();
@@ -187,7 +187,7 @@ void main() {
                 size: Size(360, 640),
                 textScaler: TextScaler.linear(1.3),
               ),
-              child: const HydraApp(),
+              child: const HydraApp(showSplash: false),
             ),
           ),
         );

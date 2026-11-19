@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 /// Tipos de bebida soportados y su factor de hidratación efectiva.
 enum DrinkType {

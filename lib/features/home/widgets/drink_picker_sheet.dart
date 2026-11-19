@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 import '../../../core/constants/drink_types.dart';
 import '../../../core/utils/hydration_utils.dart';

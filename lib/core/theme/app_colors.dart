@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 /// Paleta minimalista y moderna para Hydra (Modo Claro y Modo Oscuro).
 abstract final class AppColors {

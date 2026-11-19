@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -267,7 +267,7 @@ class HomeScreen extends ConsumerWidget {
                 padding: const EdgeInsets.fromLTRB(22, 4, 22, 28),
                 sliver: SliverList.separated(
                   itemCount: todayEntries.length,
-                  separatorBuilder: (_, _) => const SizedBox(height: 8),
+                  separatorBuilder: (_, __) => const SizedBox(height: 8),
                   itemBuilder: (context, index) {
                     final entry = todayEntries[index];
                     return _EntryTile(

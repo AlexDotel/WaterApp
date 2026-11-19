@@ -30,7 +30,7 @@ class NotificationService {
       );
 
       await _plugin.initialize(
-        settings: const InitializationSettings(
+        const InitializationSettings(
           android: androidSettings,
           iOS: darwinSettings,
           macOS: darwinSettings,
@@ -106,10 +106,13 @@ class NotificationService {
       ];
 
       int notificationId = 100;
-      for (int dayOffset = startDayOffset; dayOffset <= startDayOffset + 1; dayOffset++) {
+      for (int dayOffset = startDayOffset;
+          dayOffset <= startDayOffset + 1;
+          dayOffset++) {
         final baseDay = DateTime(now.year, now.month, now.day)
             .add(Duration(days: dayOffset));
-        var slot = DateTime(baseDay.year, baseDay.month, baseDay.day, startHour);
+        var slot =
+            DateTime(baseDay.year, baseDay.month, baseDay.day, startHour);
         final endLimit =
             DateTime(baseDay.year, baseDay.month, baseDay.day, endHour);
 
@@ -118,11 +121,13 @@ class NotificationService {
             final scheduled = tz.TZDateTime.from(slot, tz.local);
             final body = messages[notificationId % messages.length];
             await _plugin.zonedSchedule(
-              id: notificationId,
-              title: 'Hora de hidratarte · Hydra',
-              body: body,
-              scheduledDate: scheduled,
-              notificationDetails: details,
+              notificationId,
+              'Hora de hidratarte · Hydra',
+              body,
+              scheduled,
+              details,
+              uiLocalNotificationDateInterpretation:
+                  UILocalNotificationDateInterpretation.absoluteTime,
               androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
             );
             notificationId++;
@@ -153,10 +158,10 @@ class NotificationService {
         iOS: DarwinNotificationDetails(),
       );
       await _plugin.show(
-        id: 999,
-        title: 'Hydra · Recordatorio activo',
-        body: 'Así te avisaremos para que nunca pierdas tu racha 💧',
-        notificationDetails: details,
+        999,
+        'Hydra · Recordatorio activo',
+        'Así te avisaremos para que nunca pierdas tu racha 💧',
+        details,
       );
       return true;
     } catch (_) {

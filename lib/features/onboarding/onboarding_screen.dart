@@ -520,37 +520,67 @@ class _HourSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
         color: theme.colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(14),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Text(label, style: theme.textTheme.bodySmall),
+          const SizedBox(height: 6),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(label, style: theme.textTheme.bodySmall),
-              Text(
-                HydrationUtils.formatHour(hour),
-                style: theme.textTheme.titleMedium?.copyWith(
-                  fontFeatures: const [FontFeature.tabularFigures()],
+              _MiniStepButton(
+                icon: Icons.remove_rounded,
+                onTap: hour > 5 ? () => onChanged(hour - 1) : null,
+              ),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    HydrationUtils.formatHour(hour),
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontFeatures: const [FontFeature.tabularFigures()],
+                    ),
+                  ),
                 ),
+              ),
+              _MiniStepButton(
+                icon: Icons.add_rounded,
+                onTap: hour < 23 ? () => onChanged(hour + 1) : null,
               ),
             ],
           ),
-          const Spacer(),
-          IconButton(
-            visualDensity: VisualDensity.compact,
-            onPressed: hour > 5 ? () => onChanged(hour - 1) : null,
-            icon: const Icon(Icons.remove_rounded, size: 18),
-          ),
-          IconButton(
-            visualDensity: VisualDensity.compact,
-            onPressed: hour < 23 ? () => onChanged(hour + 1) : null,
-            icon: const Icon(Icons.add_rounded, size: 18),
-          ),
         ],
+      ),
+    );
+  }
+}
+
+class _MiniStepButton extends StatelessWidget {
+  const _MiniStepButton({required this.icon, required this.onTap});
+
+  final IconData icon;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return InkWell(
+      borderRadius: BorderRadius.circular(8),
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.all(4),
+        child: Icon(
+          icon,
+          size: 18,
+          color: onTap != null
+              ? theme.colorScheme.onSurface
+              : theme.disabledColor,
+        ),
       ),
     );
   }

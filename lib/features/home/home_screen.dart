@@ -264,7 +264,7 @@ class HomeScreen extends ConsumerWidget {
               )
             else
               SliverPadding(
-                padding: const EdgeInsets.fromLTRB(22, 4, 22, 28),
+                padding: const EdgeInsets.fromLTRB(22, 4, 22, 88),
                 sliver: SliverList.separated(
                   itemCount: todayEntries.length,
                   separatorBuilder: (_, __) => const SizedBox(height: 8),

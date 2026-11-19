@@ -231,7 +231,7 @@ class SettingsScreen extends ConsumerWidget {
           builder: (context, setModalState) {
             final theme = Theme.of(context);
             return SafeArea(
-              child: Padding(
+              child: SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(24, 4, 24, 24),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -333,6 +333,7 @@ class SettingsScreen extends ConsumerWidget {
 
     await showModalBottomSheet<void>(
       context: context,
+      isScrollControlled: true,
       showDragHandle: true,
       backgroundColor: Theme.of(context).colorScheme.surface,
       shape: const RoundedRectangleBorder(
@@ -343,7 +344,7 @@ class SettingsScreen extends ConsumerWidget {
           builder: (context, setModalState) {
             final theme = Theme.of(context);
             return SafeArea(
-              child: Padding(
+              child: SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(24, 4, 24, 24),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -402,6 +403,7 @@ class SettingsScreen extends ConsumerWidget {
 
     await showModalBottomSheet<void>(
       context: context,
+      isScrollControlled: true,
       showDragHandle: true,
       backgroundColor: Theme.of(context).colorScheme.surface,
       shape: const RoundedRectangleBorder(
@@ -412,7 +414,7 @@ class SettingsScreen extends ConsumerWidget {
           builder: (context, setModalState) {
             final theme = Theme.of(context);
             return SafeArea(
-              child: Padding(
+              child: SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(24, 4, 24, 24),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,

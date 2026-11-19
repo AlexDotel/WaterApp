@@ -64,7 +64,7 @@ class _DrinkPickerSheetState extends State<_DrinkPickerSheet> {
       ..sort();
 
     return SafeArea(
-      child: Padding(
+      child: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(24, 4, 24, 24),
         child: Column(
           mainAxisSize: MainAxisSize.min,

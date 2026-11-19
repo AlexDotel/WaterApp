@@ -60,10 +60,10 @@ class WeeklyBarChart extends StatelessWidget {
             ),
             const SizedBox(height: 18),
             SizedBox(
-              height: 150,
+              height: 162,
               child: LayoutBuilder(
                 builder: (context, constraints) {
-                  final barAreaHeight = constraints.maxHeight - 26;
+                  final barAreaHeight = constraints.maxHeight - 36;
                   final goalLineTop = barAreaHeight * (1 - goalFraction);
 
                   return Stack(
@@ -93,8 +93,7 @@ class WeeklyBarChart extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                SizedBox(
-                                  height: barAreaHeight,
+                                Expanded(
                                   child: Align(
                                     alignment: Alignment.bottomCenter,
                                     child: Tooltip(
@@ -130,6 +129,7 @@ class WeeklyBarChart extends StatelessWidget {
                                 const SizedBox(height: 8),
                                 Text(
                                   _dayLabels[item.date.weekday - 1],
+                                  maxLines: 1,
                                   style: theme.textTheme.labelSmall?.copyWith(
                                     fontWeight: isToday
                                         ? FontWeight.w700

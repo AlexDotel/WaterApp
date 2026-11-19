@@ -125,7 +125,7 @@ class ProgressScreen extends ConsumerWidget {
                 crossAxisCount: 2,
                 mainAxisSpacing: 12,
                 crossAxisSpacing: 12,
-                childAspectRatio: 1.38,
+                mainAxisExtent: 152,
               ),
               itemBuilder: (context, index) {
                 final badge = AppAchievements.all[index];
@@ -168,19 +168,21 @@ class ProgressScreen extends ConsumerWidget {
                                 ),
                             ],
                           ),
-                          const Spacer(),
+                          const SizedBox(height: 12),
                           Text(
                             badge.title,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: theme.textTheme.titleSmall,
                           ),
-                          const SizedBox(height: 2),
-                          Text(
-                            badge.description,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: theme.textTheme.bodySmall,
+                          const SizedBox(height: 4),
+                          Expanded(
+                            child: Text(
+                              badge.description,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: theme.textTheme.bodySmall,
+                            ),
                           ),
                         ],
                       ),
@@ -230,22 +232,26 @@ class _MetricCard extends StatelessWidget {
               child: Icon(icon, size: 18, color: color),
             ),
             const SizedBox(height: 12),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.baseline,
-              textBaseline: TextBaseline.alphabetic,
-              children: [
-                Text(
-                  value,
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.w700,
-                    fontFeatures: const [FontFeature.tabularFigures()],
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.baseline,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  Text(
+                    value,
+                    style: theme.textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.w700,
+                      fontFeatures: const [FontFeature.tabularFigures()],
+                    ),
                   ),
-                ),
-                if (unit.isNotEmpty) ...[
-                  const SizedBox(width: 4),
-                  Text(unit, style: theme.textTheme.bodySmall),
+                  if (unit.isNotEmpty) ...[
+                    const SizedBox(width: 4),
+                    Text(unit, style: theme.textTheme.bodySmall),
+                  ],
                 ],
-              ],
+              ),
             ),
             const SizedBox(height: 2),
             Text(label, style: theme.textTheme.bodySmall),

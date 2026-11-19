@@ -2,8 +2,11 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/splash_bg" />
     <item
-        android:width="144dp"
-        android:height="144dp"
-        android:drawable="@drawable/hydra_splash_logo"
-        android:gravity="center" />
+        android:width="112dp"
+        android:height="112dp"
+        android:gravity="center">
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/hydra_splash_icon" />
+    </item>
 </layer-list>

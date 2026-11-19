@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Gota minimalista blanca centrada dentro de la zona segura de 66dp -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,24 C54,24 34,47 34,61 C34,72.05 42.95,81 54,81 C65.05,81 74,72.05 74,61 C74,47 54,24 54,24 Z" />
+    <!-- Brillo celeste sutil en la curva inferior izquierda -->
+    <path
+        android:fillColor="#590EA5E9"
+        android:pathData="M43.2,62.2 C43.2,67.6 47.4,72.2 53.1,72.7 C54.2,72.8 55.1,71.9 55.1,70.8 C55.1,69.8 54.4,69.0 53.4,68.9 C49.8,68.6 47.0,65.8 47.0,62.2 C47.0,61.2 46.2,60.4 45.1,60.4 C44.0,60.4 43.2,61.2 43.2,62.2 Z" />
+</vector>

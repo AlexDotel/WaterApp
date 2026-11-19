@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="hydraBg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="55%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="dropHighlight" x1="176" y1="120" x2="336" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E0F2FE" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle background -->
+  <rect width="512" height="512" rx="128" fill="url(#hydraBg)" />
+
+  <!-- Subtle top inner sheen -->
+  <rect x="6" y="6" width="500" height="500" rx="122" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="4" />
+
+  <!-- Minimalist water droplet -->
+  <path
+    d="M256 102 C256 102 146 228 146 304 C146 364.75 195.25 414 256 414 C316.75 414 366 364.75 366 304 C366 228 256 102 256 102 Z"
+    fill="url(#dropHighlight)"
+  />
+
+  <!-- Soft inner reflection curve -->
+  <path
+    d="M202 310 C204 342 228 364 256 366"
+    stroke="#0EA5E9"
+    stroke-opacity="0.34"
+    stroke-width="20"
+    stroke-linecap="round"
+  />
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <!-- Android Adaptive Icon foreground (centered inside 66% safe zone) -->
+  <path
+    d="M256 136 C256 136 172 232 172 290 C172 336.39 209.61 374 256 374 C302.39 374 340 336.39 340 290 C340 232 256 136 256 136 Z"
+    fill="#FFFFFF"
+  />
+  <path
+    d="M214 295 C216 320 234 336 256 338"
+    stroke="#0EA5E9"
+    stroke-opacity="0.34"
+    stroke-width="15"
+    stroke-linecap="round"
+  />
+</svg>

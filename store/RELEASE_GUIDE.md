@@ -54,7 +54,9 @@ El archivo listo para subir quedará en:
 3. Sube los gráficos ya generados en tu repo:
    - **Ícono de la app (512×512):** `store/play_store_icon_512.png`
    - **Gráfico de funciones (1024×500):** `store/feature_graphic_1024x500.png`
-   - **Capturas de pantalla:** toma 3–4 capturas reales desde tu teléfono (`Hoy`, `Progreso`, `Ajustes`, `Onboarding`).
+   - **Capturas de teléfono (1080×1920, 6 pantallas):** `store/screenshots/phone/`
+   - **Capturas de tablet 7" (1200×1920, 4 pantallas):** `store/screenshots/tablet-7/`
+   - **Capturas de tablet 10" (1920×1200, 3 pantallas):** `store/screenshots/tablet-10/`
 4. Ve a **Pruebas internas (Internal testing)** o **Pruebas cerradas (Closed testing)** → **Crear nueva versión** → sube `app-release.aab`.
    *(Nota: las cuentas personales nuevas de Google Play requieren 12 testers en pruebas cerradas durante 14 días antes de pasar a Producción.)*
 

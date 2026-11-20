@@ -10,7 +10,7 @@ Copia y pega estos campos directamente en **Google Play Console**.
   `Cuenta tus vasos de agua con diseño minimalista, rachas y recordatorios.` *(72 caracteres)*
 - **Categoría:** Salud y bienestar (`Health & Fitness`)
 - **Etiquetas sugeridas:** Hidratación, Agua, Salud, Hábitos, Recordatorios
-- **Package ID:** `com.alexdotel.hydra`
+- **Package ID:** `nuviapps.co.hydra`
 - **Política de privacidad (tras activar GitHub Pages en `/docs`):**  
   `https://alexdotel.github.io/WaterApp/privacy-policy.html`
 

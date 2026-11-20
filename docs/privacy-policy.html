@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad · Hydra</title>
+  <title>Privacy Policy · Hydra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -36,53 +36,114 @@
       line-height: 1.65;
     }
     main {
-      max-width: 720px;
+      max-width: 740px;
       margin: 0 auto;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 24px;
       padding: 36px;
     }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .lang-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: 12px;
+    }
     h1 { margin-top: 0; font-size: 28px; letter-spacing: -0.5px; }
-    h2 { margin-top: 28px; font-size: 18px; color: var(--accent); }
+    h2 { margin-top: 26px; font-size: 18px; color: var(--accent); }
     p, li { color: var(--muted); font-size: 15px; }
     .meta { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
     strong { color: var(--text); }
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
   </style>
 </head>
 <body>
   <main>
-    <h1>Política de Privacidad de Hydra</h1>
-    <p class="meta">Última actualización: 19 de noviembre de 2026</p>
+    <div class="topbar">
+      <strong>Hydra · Nuviapps</strong>
+      <nav class="lang-links">
+        <a href="#en">English</a>
+        <a href="#es">Español</a>
+      </nav>
+    </div>
 
-    <p>
-      En <strong>Hydra</strong> respetamos tu privacidad. Esta política explica cómo la aplicación maneja tus datos de hidratación y preferencias.
-    </p>
+    <section id="en">
+      <h1>Privacy Policy — Hydra: Water Tracker</h1>
+      <p class="meta">Effective date: November 20, 2026 · Package: <code>nuviapps.co.hydra</code></p>
 
-    <h2>1. Almacenamiento 100% local</h2>
-    <p>
-      Todos los datos que registras en Hydra (vasos de agua, tipos de bebida, metas diarias, rachas, peso opcional para el cálculo de meta y horarios de recordatorio) se guardan <strong>exclusivamente en tu dispositivo</strong> mediante almacenamiento local. Hydra no envía, vende ni comparte tus datos con servidores externos ni terceros.
-    </p>
+      <p>
+        At <strong>Nuviapps</strong>, we respect your privacy. This Privacy Policy explains how <strong>Hydra: Water Tracker</strong> handles your hydration data and preferences.
+      </p>
 
-    <h2>2. Datos personales y cuentas</h2>
-    <p>
-      Hydra no requiere registro de cuenta, correo electrónico, inicio de sesión ni recopila identificadores publicitarios, ubicación o analíticas invasivas.
-    </p>
+      <h2>1. 100% Local Storage</h2>
+      <p>
+        All data you enter in Hydra (water intake logs, beverage types, daily goals, streaks, optional body weight for goal calculation, and reminder schedules) is stored <strong>exclusively on your device</strong> using local storage. Hydra does not transmit, sell, rent, or share your personal data with external servers or third parties.
+      </p>
 
-    <h2>3. Permisos del dispositivo</h2>
-    <ul>
-      <li><strong>Notificaciones (POST_NOTIFICATIONS):</strong> Se utiliza únicamente para enviarte recordatorios locales de hidratación en el horario que tú configures. Puedes desactivarlo en cualquier momento desde los ajustes de la app o del sistema.</li>
-    </ul>
+      <h2>2. No Accounts or Tracking</h2>
+      <p>
+        Hydra does not require account creation, email addresses, or login credentials, and does not collect advertising identifiers, location data, or invasive analytics.
+      </p>
 
-    <h2>4. Eliminación de datos</h2>
-    <p>
-      Dado que todos los datos residen únicamente en tu dispositivo, puedes eliminarlos por completo en cualquier momento borrando los datos de la aplicación desde los ajustes de tu teléfono o desinstalando Hydra.
-    </p>
+      <h2>3. Device Permissions</h2>
+      <ul>
+        <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used solely to deliver local hydration reminders on the schedule you configure. You may disable notifications at any time in the app or in your device settings.</li>
+      </ul>
 
-    <h2>5. Contacto</h2>
-    <p>
-      Si tienes preguntas sobre esta política de privacidad, puedes contactarnos a través del repositorio oficial del proyecto en GitHub (<code>AlexDotel/WaterApp</code>).
-    </p>
+      <h2>4. Data Deletion</h2>
+      <p>
+        Because all data is stored locally on your device, you can permanently delete it at any time by clearing the app's storage in your device settings or uninstalling Hydra.
+      </p>
+
+      <h2>5. Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, you may contact <strong>Nuviapps</strong> through the official project repository on GitHub (<code>AlexDotel/WaterApp</code>).
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="es">
+      <h1>Política de Privacidad — Hydra: Agua y Recordatorios</h1>
+      <p class="meta">Fecha de vigencia: 20 de noviembre de 2026 · Paquete: <code>nuviapps.co.hydra</code></p>
+
+      <p>
+        En <strong>Nuviapps</strong> respetamos tu privacidad. Esta política explica cómo <strong>Hydra</strong> maneja tus datos de hidratación y preferencias.
+      </p>
+
+      <h2>1. Almacenamiento 100% local</h2>
+      <p>
+        Todos los datos que registras en Hydra (vasos de agua, tipos de bebida, metas diarias, rachas, peso opcional para el cálculo de meta y horarios de recordatorio) se guardan <strong>exclusivamente en tu dispositivo</strong> mediante almacenamiento local. Hydra no envía, vende ni comparte tus datos con servidores externos ni terceros.
+      </p>
+
+      <h2>2. Sin cuentas ni rastreo</h2>
+      <p>
+        Hydra no requiere crear cuenta, correo electrónico ni inicio de sesión, y no recopila identificadores publicitarios, ubicación ni analíticas invasivas.
+      </p>
+
+      <h2>3. Permisos del dispositivo</h2>
+      <ul>
+        <li><strong>Notificaciones (POST_NOTIFICATIONS):</strong> Se utiliza únicamente para enviarte recordatorios locales de hidratación en el horario que tú configures. Puedes desactivarlo en cualquier momento desde los ajustes de la app o del sistema.</li>
+      </ul>
+
+      <h2>4. Eliminación de datos</h2>
+      <p>
+        Dado que todos los datos residen únicamente en tu dispositivo, puedes eliminarlos por completo en cualquier momento borrando los datos de la aplicación desde los ajustes de tu teléfono o desinstalando Hydra.
+      </p>
+
+      <h2>5. Contacto</h2>
+      <p>
+        Si tienes preguntas sobre esta política de privacidad, puedes contactar a <strong>Nuviapps</strong> a través del repositorio oficial del proyecto en GitHub (<code>AlexDotel/WaterApp</code>).
+      </p>
+    </section>
   </main>
 </body>
 </html>

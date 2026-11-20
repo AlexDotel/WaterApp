@@ -1,0 +1,6 @@
+# Copia este archivo como `android/key.properties` (NO lo subas a Git)
+# y completa los valores de tu upload keystore generada con keytool.
+storePassword=TU_STORE_PASSWORD
+keyPassword=TU_KEY_PASSWORD
+keyAlias=upload
+storeFile=../upload-keystore.jks
